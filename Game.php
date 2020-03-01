@@ -2,6 +2,7 @@
     require_once("Board.php");
 
     class Game extends Board{
+        
 
     }
 
