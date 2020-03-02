@@ -20,13 +20,13 @@
                         break ;
                     }
                     echo $playername1."は".$sumofdice1."マス目に進む"."\n";
-        
+
                     foreach($correctnumboard as $key=>$value){
                         $val = intval($value);
                         if($sumofdice1 == $key ){
                             if ($val < 0 ){
                                 $sumofdice1 += $val;
-                                echo "イベントが発生".$val."マス戻る"."\n";
+                                echo "イベントが発生".abs($val)."マス戻る"."\n";
                                 echo $playername1."は".$sumofdice1."マス目に移動"."\n";
                                 $i=1;
                             break;
@@ -54,7 +54,7 @@
                             if($sumofdice1 == $key ){
                                 if ($val < 0 ){
                                     $sumofdice1 += $val;
-                                    echo "イベントが発生".$val."マス戻る"."\n";
+                                    echo "イベントが発生".abs($val)."マス戻る"."\n";
                                     echo $playername1."は".$sumofdice1."マス目に移動"."\n";
                                     $i=4;
                                 break;
@@ -82,7 +82,7 @@
                             if($sumofdice1 == $key ){
                                 if ($val < 0 ){
                                     $sumofdice1 += $val;
-                                    echo "イベントが発生".$val."マス戻る"."\n";
+                                    echo "イベントが発生".abs($val)."マス戻る"."\n";
                                     echo $playername1."は".$sumofdice1."マス目に移動"."\n";
                                 break;
                                 }else if ($val > 0){
@@ -119,7 +119,7 @@
                         if($sumofdice2 == $key ){
                             if ($val < 0 ){
                                 $sumofdice2 += $val;
-                                echo "イベントが発生".$val."マス戻る"."\n";
+                                echo "イベントが発生".abs($val)."マス戻る"."\n";
                                 echo $playername2."は".$sumofdice2."マス目に移動"."\n";
                                 $i=1;
                             break;
@@ -145,7 +145,7 @@
                             if($sumofdice2 == $key ){
                                 if ($val < 0 ){
                                     $sumofdice2 += $val;
-                                    echo "イベントが発生".$val."マス戻る"."\n";
+                                    echo "イベントが発生".abs($val)."マス戻る"."\n";
                                     echo $playername2."は".$sumofdice2."マス目に移動"."\n";
                                     $i=4;
                                 break;
@@ -173,7 +173,7 @@
                             if($sumofdice2 == $key ){
                                 if ($val < 0 ){
                                     $sumofdice2 += $val;
-                                    echo "イベントが発生".$val."マス戻る"."\n";
+                                    echo "イベントが発生".abs($val)."マス戻る"."\n";
                                     echo $playername2."は".$sumofdice2."マス目に移動"."\n";
                                 break;
                                 }else if ($val > 0){
