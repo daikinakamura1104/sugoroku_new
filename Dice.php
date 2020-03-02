@@ -1,8 +1,8 @@
 <?php
 
-    require_once("Game.php");
+    require_once("Board.php");
 
-    Class Dice extends Game{
+    Class Dice extends Board{
 
         public $Dice = 0;
 

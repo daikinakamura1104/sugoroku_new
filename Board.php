@@ -2,7 +2,7 @@
     class Board{
 
         public $numofboard = array();
-        public $numofGoal = 0;
+        public $numofgoal = 0;
 
         public function __construct(){
             if (($handle = fopen("Board.csv - シート1.csv", "r")) !== FALSE) {
@@ -15,7 +15,7 @@
                 }
                 fclose($handle);
                 $this->numofboard = $numofboard;
-                $this->numofGoal = count($numofboard);
+                $this->numofgoal = count($numofboard);
                 
             }
         }
