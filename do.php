@@ -16,12 +16,14 @@
         $correctnumboard[$i++] = $value;
     }
 
-    $dice = new Dice();
-    $dice = $dice->Dice;
-
     $player = new Player();
     $playername1 = $player ->name1;
     $playername2 = $player ->name2;
+
+    $dice = new Dice();
+    $dice = $dice->Dice;
+
+    
 
 
     $game = new Game();
