@@ -2,6 +2,10 @@
     
     class Game {
 
+        public function __construct(){
+            
+        }
+
         public function start($playername1,$playername2,$correctnumboard,$numgoal,$dice){
             
             $sumofdice1 = 0;
