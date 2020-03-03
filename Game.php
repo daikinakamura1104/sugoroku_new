@@ -1,15 +1,19 @@
 <?php
-    require_once("Board.php");
-    require_once("Player.php");
-    require_once("Dice.php");
+    
+    class Game {
 
-    class Game extends player{
-
-        public function __construct($playername1,$playername2,$correctnumboard,$numgoal,$dice){
+        public function start($playername1,$playername2,$correctnumboard,$numgoal,$dice){
             
             $sumofdice1 = 0;
             $sumofdice2 = 0;
-            
+
+            echo "すごろくゲームを始めます。1回のサイコロ振りでイベントは最大3回起こります。"."\n";
+            echo "ゴールは".$numgoal."マス目です。"."\n";
+
+            echo "先攻のプレイヤーは".$playername1."です。"."\n";
+            echo "後攻のプレイヤーは".$playername2."です。"."\n";
+
+                    
             while($sumofdice1 < $numgoal && $sumofdice2 < $numgoal){
                 if($sumofdice1 < $numgoal){
                     $i = 0;
@@ -206,37 +210,5 @@
         
 
     }
-
-    $board = new Board();
-    $numboard = $board->numofboard;
-    $numgoal =  $board->numofgoal;
-
-
-    $correctnumboard = [];
-
-    $i=1;
-    foreach($numboard as $key => $value){
-        $correctnumboard[$i++] = $value;
-    }
-
-    $dice = new Dice();
-    $dice = $dice->Dice;
-
-    $player = new Player();
-    $playername1 = $player ->name1;
-    $playername2 = $player ->name2;
-
-    echo "すごろくゲームを始めます。1回のサイコロ振りでイベントは最大3回起こります。"."\n";
-    echo "ゴールは".$numgoal."マス目です。"."\n";
-
-    echo "先攻のプレイヤーは".$playername1."です。"."\n";
-    echo "後攻のプレイヤーは".$playername2."です。"."\n";
-
-
-    $game = new Game($playername1,$playername2,$correctnumboard,$numgoal,$dice);
-  
-    
-    
-
     
 ?>

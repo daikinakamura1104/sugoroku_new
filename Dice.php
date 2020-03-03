@@ -1,8 +1,6 @@
 <?php
 
-    require_once("Board.php");
-
-    Class Dice extends Board{
+    Class Dice {
 
         public $Dice = 0;
 

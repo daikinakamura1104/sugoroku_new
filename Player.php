@@ -1,8 +1,7 @@
 <?php
 
-    require_once("Dice.php");
-
-    class Player extends Dice{
+    class Player{
+        
         public $name1 = 0;
         public $name2 = 0;
         
